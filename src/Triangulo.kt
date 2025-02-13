@@ -1,14 +1,12 @@
-class Triangulo(color: String) : Figura(color) {
-
-    constructor(ladoA: Double, ladoB: Double, ladoC: Double, color: String) : this(color)
-    constructor(base: Double, altura: Double, color: String) : this(color) {}
+class Triangulo(val base: Double, val altura: Double, color: String) : Figura(color) {
 
     override fun area(): Double {
-        TODO("Not yet implemented")
+        return base * altura
     }
 
-    override fun perimetro(): Double {
-        TODO("Not yet implemented")
+    override fun perimetro(): Double? {
+        print("ERROR: No se puede calcular el perímetro de un triángulo a partir de su base y altura.\n")
+        return null
     }
 
 }
